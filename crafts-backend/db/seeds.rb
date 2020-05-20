@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+craft_a = Craft.create(name: "scrapbook", id: 1)
+craft_b = Craft.create(name: "collage", id: 2)
+craft_c = Craft.create(name: "fabrige egg", id: 3)
+
+material_a = Material.create(craft_id: 1, name: "construction paper")
+material_b = Material.create(craft_id: 2, name: "felt")
+material_c = Material.create(craft_id: 3, name: "purple dye")
