@@ -5,7 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
-import {Provider } from 'react-redux';
+import {Provider} from 'react-redux';
+import craftReducer from './reducers/craftReducer'
 
 const composeEnhancers =
   typeof window === 'object' &&
@@ -19,8 +20,7 @@ const enhancer = composeEnhancers(
   // other store enhancers if any
 );
 
-const store = createStore(rootReducer, enhancer
-);
+const store = createStore(craftReducer, enhancer);
 
 ReactDOM.render(
   <React.StrictMode>
