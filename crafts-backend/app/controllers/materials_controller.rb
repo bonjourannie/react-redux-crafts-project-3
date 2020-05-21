@@ -3,8 +3,8 @@ class MaterialsController < ApplicationController
     before_action :set_craft
 
     def index
-       @materials = @craft.materials 
-       render json: @materials
+        @materials = Material.all    
+        render json: @materials
     end
 
     def create 

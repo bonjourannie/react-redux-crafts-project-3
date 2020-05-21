@@ -15,7 +15,8 @@ componentDidMount(){
   render(){
     return(
       <div className="App">
-        APP
+        please show up
+        
       </div>
     )
   }
