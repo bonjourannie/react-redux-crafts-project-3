@@ -22,6 +22,7 @@ class MaterialsController < ApplicationController
     end
 
     def destroy
+        @material = @craft.find_by(id: params[:id])
         @material.destroy
     end
 
