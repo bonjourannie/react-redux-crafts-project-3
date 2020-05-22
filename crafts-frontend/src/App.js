@@ -3,17 +3,15 @@ import './App.css';
 import {connect} from 'react-redux'
 import {fetchCrafts} from './actions/fetchCrafts'
 
+
 class App extends Component{
 
-componentDidMount(){
-  this.props.fetchCrafts({type: 'FETCH_CRAFTS', payload: {name:'scrapbook'}})
-}
 
   render(){
 
     return(
       <div className="App">
-        please show up
+        <CraftsContainer />
         
       </div>
     )
@@ -22,7 +20,7 @@ componentDidMount(){
 
 
 
-export default connect(null, {fetchCrafts})(App);
+export default connect()(App);
 //optional second argument of action creator, mapDispatchToProps
 //mapStateToPropss gives access to values of store as props 
 //have to pass mSTP to connect - 
