@@ -19,7 +19,7 @@
     render(){
         return (
             <div>
-                <CraftInput />
+                <CraftInput /><br></br>
                 <CraftList crafts={this.props.crafts}/>
                 {/* get crafts from redux store, access through 
                 props, then send crafts to craftsList component */}
