@@ -6,9 +6,14 @@ export default function craftReducer (state = {crafts: []}, action){
     // debugger;
     switch(action.type){
         case 'FETCH_CRAFTS':
-        return {crafts: action.payload}
+            return {crafts: action.payload}
+        case 'ADD_CRAFT':
+            return {...state, crafts: [...state.crafts, action.payload]}
     default:
         return state
     }
 
 }
+
+//ADD_CRAFT add new craft w action.payload
+//spread operator gives previous state w/o changing it

@@ -6,6 +6,7 @@ class CraftsController < ApplicationController
     end
 
     def create 
+        # binding.pry
         @craft = Craft.new(craft_params)
         if @craft.save 
             render json: @craft

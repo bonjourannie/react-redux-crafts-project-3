@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux'
+import {addCraft} from '../actions/addCraft'
 
 
 
@@ -19,11 +21,16 @@ class CraftInput extends Component {
     //name of input where the change is will update key in state
     //bracets because it's setting a key of what's evaluated inside it
 
+    handleSumbut = (event) => {
+        //debugger;
+        event.preventDefault()
+        this.props.addCraft(this.state)
+    }
 
     render(){
         return(
             <div>
-                <form>
+                <form onSubmit={this.handleSumbut}>
                     <label>Add new Craft!</label>
                     <br></br>
                     <input type='text' placeholder='name' value ={this.state.name} name="name" onChange={this.handleChange}/>
@@ -38,4 +45,7 @@ class CraftInput extends Component {
     }
 }
 
-export default CraftInput
+export default connect(null, {addCraft})(CraftInput)
+//connect will create data to be sent to backend & updating redux store
+// don't need mapStateToProps, 2nd arg is action creator alternative to mapDispatchToProps
+//passing addCraft gives access to props
