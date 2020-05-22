@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import {connect} from 'react-redux'
-import {fetchCrafts} from './actions/fetchCrafts'
+
+import CraftsContainer from './containers/CraftsContainer'
 
 
 class App extends Component{
