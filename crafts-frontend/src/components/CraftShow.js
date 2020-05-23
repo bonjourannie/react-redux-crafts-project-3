@@ -2,14 +2,15 @@ import React from 'react'
 
 const CraftShow = (props) => {
 
-    // let craft = props.craft[props.match.params.id -1]
-    console.log("help")
+    let craft = props.craft[props.match.params.id -1]
+    
+    console.log(craft)
+
     return (
         <li>
-            craft
-            {/* {craft.name}
-            {craft.category}
-            {craft.notes} */}
+            {craft ? craft.name : null}
+            {craft ? craft.category : null}
+            {craft ? craft.notes : null}
         </li>
     )
 
