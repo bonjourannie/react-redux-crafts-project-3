@@ -25,6 +25,11 @@ class CraftInput extends Component {
         //debugger;
         event.preventDefault()
         this.props.addCraft(this.state)
+        this.setState({
+            name: '', 
+            category: '', 
+            notes: ''
+        })
     }
 
     render(){
