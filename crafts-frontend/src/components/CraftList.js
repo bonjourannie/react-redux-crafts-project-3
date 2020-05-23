@@ -1,5 +1,6 @@
 //functional component responsible for rendering list of crafts
 import React from 'react'
+import {Route, Link} from 'react-router-dom'
 import CraftShow from './CraftShow'
 
 const CraftList = (props) => {
@@ -7,10 +8,12 @@ const CraftList = (props) => {
     return(
         <div>
             {props.crafts.map(craft => 
-            <div key={craft.id}> <CraftShow craft={craft} /></div>)}
+            <li key={craft.id}> 
+                <Link to ={`/crafts/${craft.id}`}>{craft.name}</Link>
+            </li>)}
         </div>
     )
 
 }
 
-export default CraftList
+export default CraftList 
