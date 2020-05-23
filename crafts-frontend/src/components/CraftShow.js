@@ -1,5 +1,6 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
+import MaterialsContainer from '../containers/MaterialsContainer'
 
 const CraftShow = (props) => {
 
@@ -10,12 +11,16 @@ const CraftShow = (props) => {
     console.log(craft)
 
     return (
-        <li>
-            {/* {craft ? null : <Redirect to='/crafts'/>} */}
-            {craft ? craft.name : null}
-            {craft ? craft.category : null}
-            {craft ? craft.notes : null}
-        </li>
+        <div>
+            <h2>
+                {craft ? craft.name : null}
+            </h2>
+            <ul>
+                {craft ? craft.category : null}
+                {craft ? craft.notes : null}
+            </ul>
+            <MaterialsContainer />
+        </div>
     )
 
 

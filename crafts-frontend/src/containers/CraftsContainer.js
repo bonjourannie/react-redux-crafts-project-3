@@ -3,8 +3,9 @@
  import CraftInput from '../components/CraftInput'
  import CraftShow from '../components/CraftShow'
  import {connect} from 'react-redux';
- import {Route} from 'react-router-dom'
+ import {Route, Switch} from 'react-router-dom'
  import {fetchCrafts} from '../actions/fetchCrafts'
+ 
 
 
 
@@ -20,9 +21,11 @@
     render(){
         return (
             <div>
-                <Route path='/crafts/new' component={CraftInput}/>
-                <Route path='crafts/:id' render={(routerProps) => <CraftShow {...routerProps} crafts={this.props.crafts}/> }/>
-                <Route exact path='/crafts' render={(routerProps) => <CraftList {...routerProps} crafts={this.props.crafts}/> }/>
+                <Switch>
+                    <Route path='/crafts/new' component={CraftInput}/>
+                    <Route path='crafts/:id' render={(routerProps) => <CraftShow {...routerProps} crafts={this.props.crafts}/> }/>
+                    <Route exact path='/crafts' render={(routerProps) => <CraftList {...routerProps} crafts={this.props.crafts}/> }/>
+                </Switch>
             </div>
         )
     }
