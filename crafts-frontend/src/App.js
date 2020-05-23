@@ -21,7 +21,7 @@ class App extends Component{
 
 
 
-export default connect()(App);
+export default App
 //optional second argument of action creator, mapDispatchToProps
 //mapStateToPropss gives access to values of store as props 
 //have to pass mSTP to connect - 

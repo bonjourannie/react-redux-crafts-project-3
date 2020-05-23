@@ -2,9 +2,9 @@ import React from 'react'
 
 const CraftShow = (props) => {
 
-    let craft = props.craft[props.match.params.id -1]
-    
     console.log(craft)
+
+    let craft = props.craft[props.match.params.id -1]
 
     return (
         <li>
