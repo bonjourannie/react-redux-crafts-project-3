@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
+import MaterialInput from '../components/MaterialInput'
 
 class MaterialsContainer extends Component {
 
     render(){
         return(
             <div>
-                MaterialsContainer
+                <MaterialInput />
             </div>
         )
     }
