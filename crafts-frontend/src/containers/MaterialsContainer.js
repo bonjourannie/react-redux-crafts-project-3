@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import MaterialInput from '../components/MaterialInput'
-import MaterialShow from '../components/MaterialShow'
+import Materials from '../components/Materials'
 
 class MaterialsContainer extends Component {
 
