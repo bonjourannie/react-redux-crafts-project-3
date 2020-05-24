@@ -26,7 +26,7 @@ export default function craftReducer (state = {crafts: []}, action){
               return craft 
             }
           })
-          return {...state, crafts: crafts}
+          return {...state, crafts: craftsDelete}
         default:
             return state
     }
