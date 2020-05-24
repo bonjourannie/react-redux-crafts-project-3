@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import {addMaterial} from '../actions/addMaterial'
 
 class MaterialInput extends Component {
 
@@ -19,11 +20,10 @@ class MaterialInput extends Component {
 
     handleSumbut = (event) => {
         event.preventDefault()
-        this.props.addMaterial(this.state, craft.id)
+        this.props.addMaterial(this.state, this.props.craft.id)
         this.setState({
             name: '', 
-            category: '', 
-            notes: ''
+            description: ''
         })
     }
 
@@ -46,7 +46,7 @@ class MaterialInput extends Component {
 
 }
 
-export default connect(null)(MaterialInput)
+export default connect(null, {addMaterial})(MaterialInput)
 
 //class component because it's a controlled form 
 //handling values & state, must connect to store

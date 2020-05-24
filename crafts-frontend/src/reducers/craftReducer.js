@@ -9,8 +9,17 @@ export default function craftReducer (state = {crafts: []}, action){
             return {crafts: action.payload}
         case 'ADD_CRAFT':
             return {...state, crafts: [...state.crafts, action.payload]}
-    default:
-        return state
+        case 'ADD_MATERIAL':
+            let crafts = state.crafts.map(craft => {
+                if (craft.id === action.payload.id) {
+                  return action.payload
+                } else {
+                  return craft 
+                }
+              })
+              return {...state, crafts: crafts}
+        default:
+            return state
     }
 
 }
