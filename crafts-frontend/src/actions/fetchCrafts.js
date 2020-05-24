@@ -10,7 +10,7 @@ export function fetchCrafts(){
    } 
 
 }
-//update redux store with dispatch//dispatch 
+//update redux store with dispatch & dispatch 
 //action to reducer which is responsible for 
 //updateing state based on action that comes in
 
