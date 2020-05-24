@@ -1,5 +1,6 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
+import CraftEdit from './CraftEdit'
 import MaterialsContainer from '../containers/MaterialsContainer'
 
 const CraftShow = (props) => {
@@ -21,6 +22,7 @@ const CraftShow = (props) => {
                 {craft ? craft.notes : null}
             </ul>
             <MaterialsContainer craft={craft}/>
+            <CraftEdit craft={craft} />
         </div>
     )
 

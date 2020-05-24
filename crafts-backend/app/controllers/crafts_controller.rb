@@ -21,6 +21,13 @@ class CraftsController < ApplicationController
         render json: @craft 
     end
 
+    def update 
+        @craft = Craft.find(params[:id])
+        @craft.update(name: ["craft"]["name"])
+        @craft.save
+        render json: @craft 
+    end
+
     def destroy
         @craft = Craft.find(params[:id])
         @craft.destroy 
