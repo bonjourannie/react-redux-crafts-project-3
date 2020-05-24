@@ -3,6 +3,31 @@ import {connect} from 'react-redux'
 
 class MaterialInput extends Component {
 
+    state = {
+        name: '',
+        description: ''
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+    //pass in event as paramter
+    //name of input where the change is will update key in state
+    //bracets because it's setting a key of what's evaluated inside it
+
+    handleSumbut = (event) => {
+        //debugger;
+        event.preventDefault()
+        this.props.addMaterial(this.state)
+        this.setState({
+            name: '', 
+            category: '', 
+            notes: ''
+        })
+    }
+
     render(){
         return (
             <div>
@@ -14,6 +39,7 @@ class MaterialInput extends Component {
                     <input type='text' placeholder='description' value={this.state.category} name="description" onChange={this.handleChange}/>
                     <br></br>
                     <input type="submit"/>
+                </form>
             </div>
         )
     }
