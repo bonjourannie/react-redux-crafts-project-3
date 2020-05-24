@@ -18,9 +18,8 @@ class MaterialInput extends Component {
     //bracets because it's setting a key of what's evaluated inside it
 
     handleSumbut = (event) => {
-        //debugger;
         event.preventDefault()
-        this.props.addMaterial(this.state)
+        this.props.addMaterial(this.state, craft.id)
         this.setState({
             name: '', 
             category: '', 
