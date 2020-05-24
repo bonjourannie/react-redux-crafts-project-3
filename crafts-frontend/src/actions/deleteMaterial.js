@@ -11,4 +11,3 @@ export const deleteMaterial = (materialId, craftId) => {
 }
 
 //use dispatch because it's an asyncronous request
-//commit will be add deleteMaterial & update syntax in actions
