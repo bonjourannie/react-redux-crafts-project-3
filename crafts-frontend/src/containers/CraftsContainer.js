@@ -5,7 +5,7 @@
  import {connect} from 'react-redux';
  import {Route, Switch} from 'react-router-dom'
  import {fetchCrafts} from '../actions/fetchCrafts'
- 
+ import NavBar from '../components/NavBar' 
 
 
 
@@ -21,6 +21,7 @@
     render(){
         return (
             <div>
+                <NavBar /><br></br>
                 <Switch>
                     <Route path='/crafts/new' component={CraftInput}/>
                     <Route path='/crafts/:id' render={(routerProps) => <CraftShow {...routerProps} crafts={this.props.crafts}/> }/>
