@@ -3,25 +3,28 @@ import MaterialInput from './MaterialInput'
 import {connect} from 'react-redux'
 import {deleteMaterial} from '../actions/deleteMaterial'
 
-const Materials = (props) => {
+class Materials extends Component {
 
-    console.log(props.materials)
+    state = {}
 
-    const handleDelete = (material) => {
-        props.deleteMaterial(material.id, material.craft_id)
+    // console.log(props.materials)
+
+    handleDelete = (material) => {
+        this.props.deleteMaterial(material.id, material.craft_id)
     }
 
+    render () {
     return (
         <div>
-            {props.materials && props.materials.map(material =>
+            {this.props.materials && this.props.materials.map(material =>
                 <li key={material.id}>
                     {material.name}
                     {material.description}
-                    <button onClick ={() => handleDelete(material)}>Delete material</button>
+                    <button onClick ={() => this.handleDelete(material)}>Delete material</button>
                 </li>
             )}
         </div>
-    )
+    )}
 }
 
 export default connect(null, {deleteMaterial})(Materials)
