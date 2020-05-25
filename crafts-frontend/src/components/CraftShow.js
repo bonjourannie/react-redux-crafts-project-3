@@ -18,8 +18,8 @@ const CraftShow = (props) => {
                 {craft ? craft.name : null}
             </h2>
             <ul>
-                {craft ? craft.category : null}
-                {craft ? craft.notes : null}
+                category: {craft ? craft.category : null}<br></br>
+                notes: {craft ? craft.notes : null}
             </ul>
             <MaterialsContainer craft={craft}/>
             <CraftEdit craft={craft} />

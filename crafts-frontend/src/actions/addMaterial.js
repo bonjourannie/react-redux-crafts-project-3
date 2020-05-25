@@ -1,7 +1,7 @@
 export const addMaterial = (material, craftId) => {
 
     return (dispatch) => {
-        fetch('http://localhost:3001/crafts/`{craftId}/materials', {
+        fetch(`http://localhost:3001/crafts/${craftId}/materials`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
