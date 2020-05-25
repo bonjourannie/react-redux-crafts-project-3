@@ -11,19 +11,22 @@ const CraftShow = (props) => {
     let craft = props.crafts.filter(craft => craft.id == props.match.params.id)[0]
 
     console.log(craft)
-
+    debugger;
     return (
         <div>
             <h2>
                 {craft ? craft.name : null}
             </h2>
             <ul>
+                {craft ? craft.materials : null}
                 {craft ? craft.category : null}
                 {craft ? craft.notes : null}
             </ul>
             <MaterialsContainer craft={craft}/>
             <CraftEdit craft={craft} />
+            
         </div>
+
     )
 
 
