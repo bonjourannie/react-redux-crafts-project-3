@@ -1,2 +1,0 @@
-class CraftLog < ApplicationRecord
-end

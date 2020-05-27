@@ -23,9 +23,11 @@
             <div>
                 <NavBar /><br></br>
                 <Switch>
+                <Route exact path='/crafts' render={(routerProps) => <CraftList {...routerProps} crafts={this.props.crafts}/> }/>
+
                     <Route path='/crafts/new' component={CraftInput}/>
                     <Route path='/crafts/:id' render={(routerProps) => <CraftShow {...routerProps} crafts={this.props.crafts}/> }/>
-                    <Route exact path='/crafts' render={(routerProps) => <CraftList {...routerProps} crafts={this.props.crafts}/> }/>
+                    
                 </Switch>
             </div>
         )

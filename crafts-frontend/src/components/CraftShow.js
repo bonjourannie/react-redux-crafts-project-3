@@ -5,7 +5,7 @@ import MaterialsContainer from '../containers/MaterialsContainer'
 
 const CraftShow = (props) => {
 
-    // console.log(props)
+    console.log(props)
 
     // let craft = props.crafts[props.match.params.id -1]
     let craft = props.crafts.filter(craft => craft.id == props.match.params.id)[0]
