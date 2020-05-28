@@ -26,6 +26,7 @@ export default function craftReducer (state = {crafts: []}, action){
               return craft 
             }
           })
+          return {...state, crafts: craftsDelete}
         case 'EDIT_CRAFT':
           let craftsEdit = state.crafts.map(craft => {
             if (craft.id === action.payload.id) {
