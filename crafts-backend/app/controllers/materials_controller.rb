@@ -3,7 +3,7 @@ class MaterialsController < ApplicationController
     before_action :set_craft
 
     def index
-        @materials = Material.all    
+        @materials = Material.all   
         render json: @materials
     end
 
@@ -17,7 +17,7 @@ class MaterialsController < ApplicationController
     end
 
     def show 
-        @material = @craft.find_by(id: params[:id])
+        @material = Material.find(params[:id])
         render json: @material
     end
 

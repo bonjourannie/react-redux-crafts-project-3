@@ -5,8 +5,7 @@ import {connect} from 'react-redux'
 import CraftsContainer from './containers/CraftsContainer'
 
 
-class App extends Component{
-
+class App extends Component{ 
 
   render(){
 

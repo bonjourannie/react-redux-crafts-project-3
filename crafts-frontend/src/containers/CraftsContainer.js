@@ -7,7 +7,8 @@
  import {fetchCrafts} from '../actions/fetchCrafts'
  import NavBar from '../components/NavBar' 
 
-
+//container renders other components, passes them data, 
+//class components because they deal with state
 
  class CraftsContainer extends Component {
 
@@ -25,9 +26,9 @@
                 <Switch>
                 <Route exact path='/crafts' render={(routerProps) => <CraftList {...routerProps} crafts={this.props.crafts}/> }/>
 
-                    <Route path='/crafts/new' component={CraftInput}/>
-                    <Route path='/crafts/:id' render={(routerProps) => <CraftShow {...routerProps} crafts={this.props.crafts}/> }/>
-                    
+                <Route path='/crafts/new' component={CraftInput}/>
+                
+                <Route path='/crafts/:id' render={(routerProps) => <CraftShow {...routerProps} crafts={this.props.crafts}/> }/>    
                 </Switch>
             </div>
         )

@@ -1,2 +1,0 @@
-class CraftLogsController < ApplicationController
-end
