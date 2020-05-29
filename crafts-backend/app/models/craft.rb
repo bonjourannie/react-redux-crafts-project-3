@@ -1,5 +1,6 @@
 class Craft < ApplicationRecord
-    has_many :materials, :craft_logs
+    has_many :materials
+
     validates :name, presence: true
     
 end

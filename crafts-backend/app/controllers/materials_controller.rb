@@ -35,6 +35,6 @@ class MaterialsController < ApplicationController
     end
 
     def material_params
-        params.permit(:comment, :craft_id)
+        params.require(:material).permit(:name, :craft_id, :description)
     end
 end
