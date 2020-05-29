@@ -1,7 +1,7 @@
 //functional component responsible for rendering list of crafts
 import React from 'react'
 import {Route, Link} from 'react-router-dom'
-import CraftShow from './CraftShow'
+// import CraftShow from './CraftShow'
 
 const CraftList = (props) => {
 

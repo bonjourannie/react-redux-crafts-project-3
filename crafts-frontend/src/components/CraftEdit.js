@@ -37,7 +37,7 @@ class CraftEdit extends Component {
         return(
             <div>
                 <form onSubmit={this.handleSumbut}>
-                    <label>Add new Craft!</label>
+                    <label>edit this craft</label>
                     <br></br>
                     <input type='text' placeholder='name' value ={this.state.name} name="name" onChange={this.handleChange}/>
                     <br></br>
