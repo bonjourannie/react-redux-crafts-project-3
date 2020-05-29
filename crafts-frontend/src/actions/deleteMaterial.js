@@ -5,7 +5,7 @@ export const deleteMaterial = (materialId, craftId) => {
             method: 'DELETE'
         })
         .then(resp => resp.json())
-        .then(craft => dispatch({type: 'DELETE_TRANSACTION', payload: craft}))
+        .then(craft => dispatch({type: 'DELETE_MATERIAL', payload: craft}))
     }
 
 }

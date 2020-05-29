@@ -22,14 +22,10 @@
     render(){
         return (
             <div>
-                <h3>Welcome to the crafts closet!</h3>
-                <p>check out crafts, and make your own</p>
-                <NavBar /><br></br>
-                
+                <NavBar /><br></br>  
                 <Switch>
                 <Route exact path='/crafts' render={(routerProps) => <CraftList {...routerProps} crafts={this.props.crafts}/> }/>
                 <Route path='/crafts/new' component={CraftInput}/>
-                
                 <Route path='/crafts/:id' render={(routerProps) => <CraftShow {...routerProps} crafts={this.props.crafts}/> }/>    
                 </Switch>
             </div>

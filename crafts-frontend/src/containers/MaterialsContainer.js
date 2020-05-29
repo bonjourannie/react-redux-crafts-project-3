@@ -8,7 +8,7 @@ class MaterialsContainer extends Component {
         return(
             <div>
                 <MaterialInput craft={this.props.craft}/>
-                <Materials transactions={this.props.craft && this.props.craft.materials} />
+                <Materials materials={this.props.craft && this.props.craft.materials} />
             </div>
         )
     }

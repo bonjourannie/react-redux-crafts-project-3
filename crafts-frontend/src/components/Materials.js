@@ -30,5 +30,5 @@ class Materials extends Component {
 export default connect(null, {deleteMaterial})(Materials)
 
 //functional component 
-//map over transactions and display
+//map over materials and display
 //connect gives access to  dispatchToProps in handleDelete
