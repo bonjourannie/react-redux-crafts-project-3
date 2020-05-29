@@ -7,7 +7,7 @@ class MaterialInput extends Component {
     state = {
         name: '',
         description: ''
-    }
+    } 
 
     handleChange = (event) => {
         this.setState({
@@ -33,9 +33,9 @@ class MaterialInput extends Component {
                 <form onSubmit={this.handleSumbut}>
                     <label>Add materials to your craft</label>
                     <br></br>
-                    <input type='text' placeholder='name' value ={this.state.name} name="name" onChange={this.handleChange}/>
+                    <input type="text" name="name" placeholder="name" value ={this.state.name}  onChange={this.handleChange}/>
                     <br></br>
-                    <input type='text' placeholder='description' value={this.state.category} name="description" onChange={this.handleChange}/>
+                    <input type="text" name="description" placeholder="description" value={this.state.description }  onChange={this.handleChange}/>
                     <br></br>
                     <input type="submit"/>
                 </form>

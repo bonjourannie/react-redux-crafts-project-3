@@ -8,7 +8,7 @@ class MaterialsController < ApplicationController
     end
 
     def create 
-        @material = @craft.material.new(material_params)
+        @material = @craft.materials.new(material_params)
         if @material.save 
             render json: @craft
         else
