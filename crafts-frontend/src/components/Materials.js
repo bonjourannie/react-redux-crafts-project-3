@@ -18,8 +18,7 @@ class Materials extends Component {
         <div>
             {this.props.materials && this.props.materials.map(material =>
                 <li key={material.id}>
-                    {material.name}
-                    {material.description}
+                    {material.name} - {material.description}
                     <button onClick ={() => this.handleDelete(material)}>Delete material</button>
                 </li>
             )}

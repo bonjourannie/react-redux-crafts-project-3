@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_20_003629) do
+ActiveRecord::Schema.define(version: 2020_05_29_222326) do
 
   create_table "craft_logs", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "craft_id"
+    t.string "comment"
   end
 
   create_table "crafts", force: :cascade do |t|
