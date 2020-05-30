@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   # resources :craft_logs
   resources :crafts  do
     resources :materials

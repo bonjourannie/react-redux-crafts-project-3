@@ -28,7 +28,7 @@ class MaterialsController < ApplicationController
         render json: @craft
     end
 
-    private 
+    private  
 
     def set_craft 
         @craft = Craft.find(params[:craft_id])

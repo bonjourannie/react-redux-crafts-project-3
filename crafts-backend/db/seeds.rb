@@ -12,3 +12,4 @@ craft_c = Craft.create(name: "fabrige egg", id: 3)
 material_a = Material.create(craft_id: 1, name: "construction paper")
 material_b = Material.create(craft_id: 2, name: "felt")
 material_c = Material.create(craft_id: 3, name: "purple dye")
+
