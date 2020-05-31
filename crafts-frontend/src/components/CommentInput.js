@@ -5,8 +5,7 @@ import {addComment} from '../actions/addComment'
 class CommentInput extends Component {
 
     state = {
-        name: '',
-        description: ''
+        body: ''
     } 
 
     handleChange = (event) => {

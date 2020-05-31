@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+    
     before_action :set_craft
 
     def index
@@ -33,7 +34,7 @@ class CommentsController < ApplicationController
         @craft = Craft.find(params[:craft_id])
     end
 
-    def craft_params
-        params.require(:material).permit(:name, :craft_id, :description)
+    def comment_params
+        params.require(:comment).permit(:body, :craft_id)
     end
 end

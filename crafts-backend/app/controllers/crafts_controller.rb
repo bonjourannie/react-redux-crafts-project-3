@@ -23,7 +23,8 @@ class CraftsController < ApplicationController
 
     def update 
         @craft = Craft.find(params[:id])
-        @craft.update(name: ["craft"]["name"])
+        # binding.pry
+        @craft.update(craft_params)
         @craft.save
         render json: @craft 
     end

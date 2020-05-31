@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import MaterialInput from './MaterialInput'
 import {connect} from 'react-redux'
 import {deleteMaterial} from '../actions/deleteMaterial'
 
