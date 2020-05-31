@@ -36,6 +36,15 @@ export default function craftReducer (state = {crafts: []}, action){
             }
           })
           return {...state, crafts: craftsEdit}
+          case 'ADD_COMMENT':
+            let craftsComment = state.crafts.map(craft => {
+                if (craft.id === action.payload.id) {
+                  return action.payload
+                } else {
+                  return craft 
+                }
+              })
+              return {...state, crafts: craftsComment}
         default:
             return state
     }

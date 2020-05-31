@@ -2,6 +2,8 @@ import React from 'react'
 import {Redirect} from 'react-router-dom'
 import CraftEdit from './CraftEdit'
 import MaterialsContainer from '../containers/MaterialsContainer'
+import CommentContainer from '../containers/CommentsContainer'
+import CommentsContainer from '../containers/CommentsContainer'
 
 const CraftShow = (props) => {
 
@@ -23,6 +25,7 @@ const CraftShow = (props) => {
             </ul>
             <MaterialsContainer craft={craft}/>
             <CraftEdit craft={craft} />
+            <CommentsContainer craft={craft}/>
             
         </div>
 
