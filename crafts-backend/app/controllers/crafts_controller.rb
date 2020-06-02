@@ -36,6 +36,6 @@ class CraftsController < ApplicationController
 
     private 
     def craft_params
-        params.require(:craft).permit(:name, :category, :notes)
+        params.require(:craft).permit(:name, :category, :notes, :id)
     end
 end

@@ -8,7 +8,9 @@ class CommentsController < ApplicationController
     end
 
     def create 
+        # binding.pry
         @comment = @craft.comments.new(comment_params)
+        
         if @comment.save 
             render json: @craft
         else
