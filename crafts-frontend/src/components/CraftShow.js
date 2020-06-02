@@ -2,16 +2,17 @@ import React from 'react'
 import CraftEdit from './CraftEdit'
 import MaterialsContainer from '../containers/MaterialsContainer'
 import CommentsContainer from '../containers/CommentsContainer'
+import {Link} from "react-router-dom"
 
 const CraftShow = (props) => {
 
-    console.log(props)
+    // console.log(props)
 
     // let craft = props.crafts[props.match.params.id -1]
     let craft = props.crafts.filter(craft => craft.id == props.match.params.id)[0]
 
     console.log(craft)
-    // debugger;
+    debugger;
     return (
         <div>
             <h2>
@@ -22,7 +23,9 @@ const CraftShow = (props) => {
                 notes: {craft ? craft.notes : null}
             </ul>
             <MaterialsContainer craft={craft}/>
+            <br></br>
             <CraftEdit craft={craft} />
+            <br></br>
             <CommentsContainer craft={craft}/>
             
         </div>

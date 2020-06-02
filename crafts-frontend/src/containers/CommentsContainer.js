@@ -7,6 +7,7 @@ class CommentsContainer extends Component {
     render(){
         return(
             <div>
+                <p>Comments</p>
                 <Comments comments={this.props.craft && this.props.craft.comments} />
                 <CommentInput craft={this.props.craft}/>
             </div>

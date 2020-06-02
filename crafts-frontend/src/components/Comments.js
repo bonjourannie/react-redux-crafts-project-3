@@ -1,25 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Comments extends Component {
+const Comments = (props) => {
 
-    state = {}
+    // let craft = props.crafts.filter(craft => craft.id == props.match.params.id)[0]
 
-
-    
-    render () {
     return (
         <div>
-            {this.props.comments && this.props.comments.map(comment =>
+            {props.comments && props.comments.map(comment =>
                 <li key={comment.id}>
                     {comment.body}
                 </li>
             )}
         </div>
-    )}
+    )
 }
 
 export default (Comments)
 
 //functional component 
-//map over materials and display
-//connect gives access to  dispatchToProps in handleDelete
+//map over comments and display
