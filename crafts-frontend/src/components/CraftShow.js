@@ -2,7 +2,6 @@ import React from 'react'
 import CraftEdit from './CraftEdit'
 import MaterialsContainer from '../containers/MaterialsContainer'
 import CommentsContainer from '../containers/CommentsContainer'
-import {Link} from "react-router-dom"
 
 const CraftShow = (props) => {
 
@@ -11,8 +10,8 @@ const CraftShow = (props) => {
     // let craft = props.crafts[props.match.params.id -1]
     let craft = props.crafts.filter(craft => craft.id == props.match.params.id)[0]
 
-    console.log(craft)
-    debugger;
+    // console.log(craft)
+    // debugger;
     return (
         <div>
             <h2>
